@@ -1,0 +1,286 @@
+return Column(
+      children: [
+//  Row bar
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Icon(
+                Icons.format_list_bulleted,
+                color: Colors.red,
+                size: 40.0
+            ),
+            SizedBox(
+              width: 10,
+            ),
+            Icon(
+              Icons.email,
+              color: Colors.red,
+              size: 40.0
+            ),
+            SizedBox(
+              width: 30,
+            ),
+            Text('Xin chào Nguyễn Minh Vũ'),
+            SizedBox(
+              width: 50,
+            ),
+            Icon(
+              Icons.subdirectory_arrow_right,
+              color: Colors.red,
+              size: 40.0,
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+//  Account info
+        Container(
+          color: Colors.red,
+          width: 500,
+          height: 300,
+          child: Stack(
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Positioned(
+                left: 130,
+                right: 130,
+                top: 20,
+                child: Container(
+                  color: Colors.white70.withOpacity(0.3),
+                  width: 150,
+                  height: 150,
+                ),
+              ),
+              const Positioned(
+                left: 130,
+                right: 130,
+                top: 20,
+                child: Image(
+                  width: 150,
+                  height: 150,
+                  image: NetworkImage(
+                      'https://w7.pngwing.com/pngs/783/611/png-transparent-avatar-facebook-profile-user-profile-instagram-ui-twotone-icon.png'),
+                ),
+              ),
+              const Positioned(
+                left: 5,
+                bottom: 5,
+                child: Column(
+                  children: [
+                    Text('VND-TGTT-MINH VU',
+                        style: TextStyle(fontSize: 15, color: Colors.white)),
+                    Text('19036873555012',
+                        style: TextStyle(fontSize: 15, color: Colors.white))
+                  ],
+                ),
+              ),
+              const Positioned(
+                bottom: 5,
+                right: 5,
+                child: Text(
+                  'VND 999,999,999',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              )
+            ],
+          ),
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+//  App body
+        const Text('🔔 Bạn có 0 giao dịch chờ xử lý',
+            style: TextStyle(fontSize: 22, color: Colors.red)),
+        const SizedBox(
+          height: 18,
+        ),
+//  Button
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.blueAccent,
+                        fixedSize: const Size.fromRadius(40.0),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(900)
+                        ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('A')
+                ),
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blueAccent,
+                      fixedSize: const Size.fromRadius(40.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(900)
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('B')
+                ),
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blueAccent,
+                      fixedSize: const Size.fromRadius(40.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(900)
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('C')
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(
+          height: 25,
+        ),
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blueAccent,
+                      fixedSize: const Size.fromRadius(40.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(900)
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('A')
+                ),
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blueAccent,
+                      fixedSize: const Size.fromRadius(40.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(900)
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('B')
+                ),
+                OutlinedButton(
+                    onPressed: () {
+                      print('Click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      foregroundColor: Colors.blueAccent,
+                      fixedSize: const Size.fromRadius(40.0),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(900)
+                      ),
+                      padding: const EdgeInsets.all(10),
+                      side: const BorderSide(color: Colors.blueAccent),
+                    ),
+                    child: const Text('C')
+                ),
+              ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 25,),
+//  Bottom
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Column(
+              children: [
+                ElevatedButton.icon(
+                    onPressed: (){
+                      print('click the button');
+                    },
+                    style: TextButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+
+                    ),
+                    icon: const Icon(Icons.house_rounded, size: 30,),
+                    label: const Text(''),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                ElevatedButton.icon(
+                  onPressed: (){
+                    print('click the button');
+                  },
+                  style: TextButton.styleFrom(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+
+                  ),
+                  icon: const Icon(Icons.house_rounded, size: 30,),
+                  label: const Text(''),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                ElevatedButton.icon(
+                  onPressed: (){
+                    print('click the button');
+                  },
+                  style: TextButton.styleFrom(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+
+                  ),
+                  icon: const Icon(Icons.house_rounded, size: 30,),
+                  label: const Text(''),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                ElevatedButton.icon(
+                  onPressed: (){
+                    print('click the button');
+                  },
+                  style: TextButton.styleFrom(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(0)),
+
+                  ),
+                  icon: const Icon(Icons.house_rounded, size: 30,),
+                  label: const Text(''),
+                )
+              ],
+            ),
+          ],
+        ),
+      ],
+    );
