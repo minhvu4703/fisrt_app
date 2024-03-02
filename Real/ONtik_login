@@ -1,0 +1,95 @@
+return Column(
+      children: [
+//  Logo
+        const Expanded(
+          flex: 1,
+          child: Center(
+            child: Image(
+              width: 125,
+              height: 36.89,
+              image: AssetImage('assets/img/logo.png'),
+            ),
+          ),
+        ),
+//  Login
+        Expanded(
+          flex: 2,
+          child: Stack(
+            children: [
+              // Input
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),// Left, Top, Right, Bottom
+                child: Column(
+                  children: [
+                    Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 16),
+                        child: TextFormField(
+                          textAlign: TextAlign.start,
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Số tài khoản',
+                          ),
+                        )),
+                    Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 8, vertical: 16),
+                        child: TextFormField(
+                          decoration: const InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Mật khẩu',
+                          ),
+                        )),
+                    // Options
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.zero),
+                          ),
+                          child: const Text(
+                            'Tạo tài khoản',
+                            style: TextStyle(color: Colors.black, fontSize: 16),
+                          ),
+                        ),
+                        TextButton(
+                          onPressed: () {},
+                          style: TextButton.styleFrom(
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.zero),
+                          ),
+                          child: const Text(
+                            'Quên mật khẩu',
+                            style: TextStyle(color: Colors.black, fontSize: 16),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+//  Button
+        Expanded(
+          flex: 0,
+          child: ElevatedButton(
+              onPressed: (){},
+              style: TextButton.styleFrom(
+                backgroundColor: Color.fromRGBO(232, 232, 232, 1.0),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5)),
+                minimumSize: const Size(351, 48),
+              ),
+              child: const Text(
+                'Đăng nhập',
+                style: TextStyle(fontSize: 16, color: Colors.black),
+              )),
+        ),
+        const SizedBox(height: 30)
+      ],
+    );
