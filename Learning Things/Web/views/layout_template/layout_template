@@ -1,0 +1,37 @@
+import 'package:first_app/routing/route_name';
+import 'package:first_app/routing/router';
+import 'package:first_app/services/navigation_services';
+import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../locator.dart';
+import '../../widgets/centered_view/centered_view.dart';
+import '../../widgets/navigation_bar/navigation_bar.dart';
+import '../../widgets/navigation_drawer/navigation_drawer.dart';
+class LayOutTemplate extends StatelessWidget {
+  const LayOutTemplate({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) => Scaffold(
+        drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile ? const NavigationDrawerr() : null,
+        backgroundColor: Colors.white,
+        body: const CenteredView(
+          child: Column(
+            children: <Widget>[
+              NavigationBarr(),
+              Expanded(
+                  child: Navigator(
+                    key: locator<NavigationService>().navigatorKey,
+                    onGenerateRoute: generateRoute,
+                    initialRoute: HomeRoute,
+                  )
+              )
+            ],
+          ),
+        ),
+      ),
+    );;
+  }
+}
